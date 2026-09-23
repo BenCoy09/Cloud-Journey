@@ -36,3 +36,33 @@
 
 ## Tomorrow
 - Start Phase 1: Linux and Bash properly
+Day 3
+
+What I did
+
+* Started Learn to Cloud, Phase 1: Cloud
+* Started the Cloud CLI section and chose AWS as my cloud provider
+* Installed the AWS CLI on my Linux/Ubuntu environment
+* Verified the installation with aws --version
+* Learned that the AWS CLI lets me interact with AWS services directly from the terminal
+* Created an IAM user for my CLI access
+* Created AWS access keys for the IAM user
+* Configured the AWS CLI with aws configure
+* Set my default AWS region to us-east-1
+* Set the default output format to json
+* Verified that my AWS credentials were working with aws sts get-caller-identity
+* Successfully completed the Cloud CLI authentication setup
+
+What confused me
+
+* I wasn’t sure where the AWS Access Key ID and Secret Access Key came from. I learned that they are created through an IAM user’s security credentials.
+* I initially entered one of the configuration values incorrectly and had to correct it.
+* I wasn’t sure what to put for the default region and output format. I learned that the region determines where AWS resources are created/managed, while json controls how CLI output is displayed.
+* I learned that installing the AWS CLI and authenticating it are two separate steps.
+
+Tomorrow
+
+* Continue with Phase 1: Cloud
+* Learn more AWS CLI commands
+* Start working with AWS services from the terminal
+* Keep practicing Linux/Bash alongside the cloud labs
