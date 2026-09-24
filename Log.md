@@ -66,3 +66,25 @@ Tomorrow
 * Learn more AWS CLI commands
 * Start working with AWS services from the terminal
 * Keep practicing Linux/Bash alongside the cloud labs
+# Day 3
+
+## What I did
+- Deepened my understanding of IaC through a back-and-forth Q&A challenge: config vs state file, terraform init vs apply, drift, why teams use version control for infrastructure
+- Installed Terraform (v1.13.4) via HashiCorp's official source in WSL2/Ubuntu
+- Learned what SSH is and why it's used to securely access remote cloud servers
+- Launched a Linux EC2 instance on AWS
+- Set up my .pem SSH key and moved it into my Ubuntu/WSL environment
+- Used chmod 400 to set the correct permissions for my private key
+- Found my EC2 public IPv4 address
+- Connected to my EC2 instance using SSH from Ubuntu
+- Verified I was inside the remote server
+
+## What confused me
+- Got "No such file or directory" because Ubuntu couldn't find my .pem file; wasn't sure if having the key on Windows instead of Ubuntu/WSL was the problem
+- Got "Permission denied" after accepting SSH host verification, and learned that verifying the host and authenticating are separate steps
+- Accidentally pasted part of the key into the terminal instead of the .pem filename, which gave "command not found"
+- Learned I should reference the private key file with -i, not paste the key itself
+
+## Tomorrow
+- Practice more basic Linux commands on the EC2 server
+- Continue with the next Learn to Cloud lesson
