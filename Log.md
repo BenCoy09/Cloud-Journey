@@ -88,3 +88,51 @@ Tomorrow
 ## Tomorrow
 - Practice more basic Linux commands on the EC2 server
 - Continue with the next Learn to Cloud lesson
+What I did
+
+	•	Continued the Linux CTF challenges from Learn to Cloud
+	•	Learned that /etc/resolv.conf is usually a symlink to a systemd-resolved file, and used resolvectl status to see the actual upstream DNS server vs the local stub resolver
+	•	Learned scp has to run from my own machine, not the remote VM, since the destination is the VM
+	•	Found that nginx doesn't have to run on the default port 80 — checked what it was actually listening on with ss -tlnp, then read its config to find the served directory
+	•	Used tcpdump to capture live ICMP traffic and learned that ping packets can carry a hidden payload, visible in the ASCII column of a hex dump
+
+What confused me
+
+	•	I kept typing cd and cat on directories, forgetting that cat only works on files and ls is for directories
+	•	I ran scp from inside my SSH session on the VM instead of my own laptop terminal, which is the opposite of how it needs to work
+
+Tomorrow
+
+	•	Continue with cron jobs, process inspection, and archive extraction challenges
+
+Day 5
+
+What I did
+
+	•	Learned that scheduled tasks live in /etc/cron.d/, /etc/crontab, and per-user crontabs (crontab -l), and that a "do not edit" placeholder file is normal and unrelated to real jobs
+	•	Learned that every running process has a folder under /proc/<PID>/, and its environment variables live in /proc/<PID>/environ as null-separated values, readable with tr '\0' '\n'
+	•	Learned that short-lived commands like ps aux finish before you can inspect them, so I had to target a long-running process instead
+	•	Practiced unpacking nested archives, going layer by layer with file to check the type before choosing tar -xzf or gunzip
+
+What confused me
+
+	•	I initially tried to cat a compressed archive directly, which just printed garbage, instead of extracting it first
+	•	I didn't realize a PID has to be swapped in as a real number — I first ran the command with the literal word "PID" still in it
+
+Tomorrow
+
+	•	Continue with symlinks, bash history, and disk image mounting
+
+
+	•	Forked the Linux CTFs repository to my own GitHub account and made sure it was public
+	•	Submitted my completion token on learntocloud.guide
+	•	Verified both Phase 1 requirements and completed Phase 1: Linux and Bash
+	•	Reviewed my overall progress: Phase 0 (Starting from Zero) and Phase 1 (Linux and Bash) are both complete
+
+What confused me
+
+	•	My first verification attempt failed because the checker couldn't access the repo — I hadn't actually forked it yet, just typed in a URL
+
+Tomorrow
+
+	•	Start Phase 2: Networking Fundamentals
